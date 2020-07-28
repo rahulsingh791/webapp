@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Apalog</title>
+        <link rel="stylesheet" href="Style/productpage.css">
+        <script src="Script/product.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body  onload="tellCurr()">   
+        
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 id="sellername"></h1>
+                <p id="sellerinfo"></p>
+                <div class="close-btn" onclick="togglePopup()">Okay</div>
+            </div>
+        </div>
+
+        <div class="outside">
+
+        
+            <div class="sidebar">
+                <header>
+                    <img src="assets/user-image/avatar.png" id="head-img">
+                    <h5 id="userName">User</h5>
+                    <button onclick="logOut()">Logout</button>
+                </header>
+                <ul class="">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="mycatalog.html">My Catalog</a></li>
+                    <li><a href="fullcatalog.html">Full Catalog</a></li>
+                </ul>
+            </div>
+            <div class="products">
+                
+                <div class="product-img-div">
+
+
+                    <button id="backbutton" onclick="goBack()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                    <img src="" id="product-img">
+
+                </div>
+                <div class="prod-detail-div">
+                    <h2 id="product-name"></h2>
+                    &nbsp&nbsp&nbsp<p id="product-price"></p>
+                    <p id="taxes">Inclusive of all taxes</p>
+                    <button id="addcart" onclick="saveToCart()">Add to cart</button>
+                    
+                    <p id="soldby" onclick="togglePopup()"></p>
+                    <div id="standard-info"></div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+    </body>
+</html>

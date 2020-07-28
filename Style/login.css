@@ -1,0 +1,64 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap";
+body {
+  background-image: linear-gradient(to bottom, rgba(41, 244, 153, 0.2), rgba(10, 179, 228, 0.2)), url(../assets/background.jpg);
+  background-size: cover;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  height: 97.5vh;
+  justify-content: center;
+  align-items: center;
+  user-select: none; }
+
+#logo-img {
+  margin: 2rem; }
+
+#login-button {
+  height: 4em;
+  border-radius: 2.5em;
+  width: 15em;
+  background-color: #FFC107;
+  border-width: 0px;
+  padding-left: 4em;
+  margin-top: 2rem;
+  padding-right: 4em;
+  margin-bottom: 0em;
+  outline: none;
+  cursor: pointer; }
+  #login-button:hover {
+    background-color: #FBC02D; }
+
+a {
+  color: black;
+  font-size: 0.9rem; }
+
+#incorrect {
+  color: red; }
+
+.in-form {
+  width: 70%;
+  height: 1.3rem;
+  margin: 1rem;
+  border: none;
+  border-bottom: 1px solid #3d4849;
+  font-size: 1.2rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0); }
+
+#remember {
+  margin-top: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3); }
+
+#input-name {
+  margin-top: 0; }
+
+.container {
+  min-width: 300px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  box-shadow: 1px 1px 1rem 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 4em; }
+
+/*# sourceMappingURL=login.css.map */

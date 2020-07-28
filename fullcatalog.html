@@ -1,0 +1,192 @@
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Apalog</title>
+        <link rel="stylesheet" href="Style/fullcatalog.css">
+        <script src="Script/preproduct.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body onload="setUser()">
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="assets/icons/arrow-up-solid.svg"></button>
+
+        <div class="outside">
+            <div class="sidebar">
+                <header>
+                    <img src="assets/user-image/avatar.png" id="head-img">
+                    <h5 id="userName">User</h5>
+                    <button onclick="logOut()">Logout</button>
+                </header>
+                <ul class="">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="mycatalog.html">My Catalog</a></li>
+                    <li><a href="fullcatalog.html">Full Catalog</a></li>
+                </ul>
+            </div>
+            <div class="products" onscroll="scrollFunction(this)">
+                <div class="product-card" id="1" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/001.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Round Chair</h5>
+                        <h6>₹4600</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="2" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/002.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Dust pan and Brush</h5>
+                        <h6>₹520</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="3" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/003.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Wooden Chair</h5>
+                        <h6>₹2300</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="4" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/004.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Desk Chair</h5>
+                        <h6>₹1200</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="1" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/001.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Round Chair</h5>
+                        <h6>₹4600</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="2" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/002.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Dust pan and Brush</h5>
+                        <h6>₹520</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="3" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/003.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Wooden Chair</h5>
+                        <h6>₹2300</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="4" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/004.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Desk Chair</h5>
+                        <h6>₹1200</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="1" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/001.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Round Chair</h5>
+                        <h6>₹4600</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="2" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/002.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Dust pan and Brush</h5>
+                        <h6>₹520</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="3" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/003.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Wooden Chair</h5>
+                        <h6>₹2300</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="4" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/004.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Desk Chair</h5>
+                        <h6>₹1200</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="1" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/001.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Round Chair</h5>
+                        <h6>₹4600</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="2" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/002.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Dust pan and Brush</h5>
+                        <h6>₹520</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="3" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/003.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Wooden Chair</h5>
+                        <h6>₹2300</h6>
+                    </div>
+                </div>
+
+                <div class="product-card" id="4" onclick="prodClick(this)">
+                    <div class="product-image">
+                        <img src="assets/product-image/004.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h5>Desk Chair</h5>
+                        <h6>₹1200</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Apalog</title>
+        <link rel="stylesheet" href="Style/dashboard.css">
+        <script src="Script/dashboard.js"></script>
+    </head>
+
+    <body  onload="loadCurr()">
+        <div class="outside">
+            <div class="sidebar">
+                <header>
+                    <img src="assets/user-image/avatar.png" id="head-img">
+                    <h5 id="userName">User</h5>
+                    <button onclick="logOut()">Logout</button>
+                </header>
+                <ul class="">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="mycatalog.html">My Catalog</a></li>
+                    <li><a href="fullcatalog.html">Full Catalog</a></li>
+                </ul>
+            </div>
+            <div class="products">
+                
+                <div class="dashdetail">
+                    <h3 id=emailinfo></h3>
+                    <h4 id="totalitem"></h4>
+                    <h4 id="totalcost"></h4>
+                </div>
+                
+            </div>
+        </div>
+
+        
+    </body>
+</html>
