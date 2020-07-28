@@ -11,36 +11,40 @@ let user2name = "ellena@mail.com";
 let user2pass = "ellenapassword1";
 
 function checkLogin() {
-    let name = document.getElementById("input-name").value;
-    let pass = document.getElementById("input-pass").value;
-    let rem = 0;
+    if(checkValidate()){
+
+        let name = document.getElementById("input-name").value;
+        let pass = document.getElementById("input-pass").value;
+        let rem = 0;
 
 
-    if(name == user1name) {
-        if(pass == user1pass) {
-            localStorage.setItem("currUser", user1name);
-            rem = document.getElementById("remember").checked;
-            localStorage.setItem("alwaysLoggedIn", rem);
-            
-            window.location.href="fullcatalog.html";
-        }else{
+        if(name == user1name) {
+            if(pass == user1pass) {
+                localStorage.setItem("currUser", user1name);
+                rem = document.getElementById("remember").checked;
+                localStorage.setItem("alwaysLoggedIn", rem);
+                
+                window.location.href="fullcatalog.html";
+            }else{
+                document.getElementById("incorrect").innerHTML = "Incorrect Credentials";
+            }
+
+        }else if(name == user2name){
+            if(pass == user2pass) {
+                localStorage.setItem("currUser", user2name);
+                rem = document.getElementById("remember").checked;
+                localStorage.setItem("alwaysLoggedIn", rem);
+                
+                window.location.href="fullcatalog.html";
+            }else{
+                document.getElementById("incorrect").innerHTML = "Incorrect Credentials";
+            }
+        }else {
             document.getElementById("incorrect").innerHTML = "Incorrect Credentials";
         }
 
-    }else if(name == user2name){
-        if(pass == user2pass) {
-            localStorage.setItem("currUser", user2name);
-            rem = document.getElementById("remember").checked;
-            localStorage.setItem("alwaysLoggedIn", rem);
-            
-            window.location.href="fullcatalog.html";
-        }else{
-            document.getElementById("incorrect").innerHTML = "Incorrect Credentials";
-        }
-    }else {
-        document.getElementById("incorrect").innerHTML = "Incorrect Credentials";
-    }
 
+    }    
 }
 
 function setData() {
@@ -73,4 +77,26 @@ function checkRemember() {
     if(localStorage.getItem("alwaysLoggedIn")){
         window.location.href="fullcatalog.html";
     }
+}
+
+function checkMailFormat() {
+    let mail = document.getElementById("input-name").value;
+
+}
+
+function checkValidate() {
+    let mail = document.getElementById("input-name").value;
+    if(mail==""){
+        document.getElementById("incorrect").innerHTML = "Email Cannot be Blank";
+        return false;
+    }
+
+    let pass = document.getElementById("input-pass").value;
+    if(pass=""){
+
+        document.getElementById("incorrect").innerHTML = "Password Cannot be Blank";
+        return false;
+    }
+
+    return true;
 }
