@@ -18,6 +18,24 @@ function setUser() {
     document.getElementById("userName").innerHTML = user;
 }
 
+function showSidebar() {
+  
+  let sideButton = document.getElementById("sidebarBtn");
+  //sideButton.style.display = "none";
+  let sideBar = document.getElementsByClassName("sidebar")[0];
+
+  sideBar.style.display = "block";
+  let closeBtn = document.getElementById("closeSidebar");
+  closeBtn.style.display = "block";
+}
+
+function hideSidebar() {
+  let closeBtn = document.getElementById("closeSidebar");
+  closeBtn.style.display = "none";
+  let sideBar = document.getElementsByClassName("sidebar")[0];
+
+  sideBar.style.display = "none";
+}
 
 
 function scrollFunction(obj) {

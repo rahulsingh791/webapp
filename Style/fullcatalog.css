@@ -108,4 +108,46 @@ h6 {
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer; }
 
+#sidebarBtn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  border: none;
+  outline: none;
+  width: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  background-color: #FFF;
+  height: 1.5rem;
+  cursor: pointer; }
+
+#closeSidebar {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  border: none;
+  color: #120F2E;
+  outline: none;
+  width: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  background-color: #F64C72;
+  height: 1.5rem;
+  cursor: pointer; }
+
+@media all and (max-width: 480px) {
+  .outside {
+    flex-direction: column; }
+
+  .sidebar {
+    min-height: 100vh;
+    height: 0;
+    z-index: 2;
+    display: none; } }
+@media (max-width: 480px) {
+  #sidebarBtn {
+    display: block; } }
+
 /*# sourceMappingURL=fullcatalog.css.map */

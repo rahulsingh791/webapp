@@ -7,10 +7,13 @@
         <link rel="stylesheet" href="Style/fullcatalog.css">
         <script src="Script/preproduct.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body onload="setUser()">
 
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="assets/icons/arrow-up-solid.svg"></button>
+        <button onclick="showSidebar()" id="sidebarBtn"><img src="assets/icons/bars-solid.svg"></button>
+        <button onclick="topFunction()" id="myBtn"><img src="assets/icons/arrow-up-solid.svg"></button>
+        <button onclick="hideSidebar()" id="closeSidebar"><img src="assets/icons/times-solid.svg"></button>
 
         <div class="outside">
             <div class="sidebar">
