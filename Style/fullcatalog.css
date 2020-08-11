@@ -1,4 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap";
+/* .topbar h3 {
+  background-color: white;
+  padding: 0.5rem;
+} */
+/*# sourceMappingURL=fullcatalog.css.map */
 body {
   font-family: 'Nunito Sans', sans-serif;
   overflow-y: hidden; }
@@ -8,7 +13,7 @@ body {
   padding: 0;
   border: 0;
   outline: 0;
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
   box-sizing: border-box; }
 
 .outside {
@@ -60,60 +65,41 @@ body {
     box-sizing: border-box;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     border-left: 3px solid transparent; }
-
-.sidebar ul li:nth-child(2) a {
-  background-color: #E6F8FF;
-  padding-left: 2.2rem;
-  border-left-color:#0080FE ; 
-}
+  .sidebar ul li:nth-child(2) a {
+    background-color: #E6F8FF;
+    padding-left: 2.2rem;
+    border-left-color: #0080FE; }
 
 ul li:hover a {
   background-color: #E6F8FF;
   padding-left: 2.2rem;
-  border-left-color:#0080FE ; }
+  border-left-color: #0080FE; }
 
 .topbar {
   display: block;
   height: 3rem;
   background-color: white;
-
-
-  box-shadow: 2px 2px 5px grey;
-}
-
-.topbar img {
-  float: right;
-  max-height: 2rem;
-  margin-top: 0.5rem;
-  margin-right: 0rem;
-}
-
-.topbar select {
-  float: right;
-  background-color: transparent;
-  max-width: 1.5rem;
-  margin-top: 1rem;
-  margin-right: 0.5rem;
-}
-
-.topbar select option:nth-child(2){
-  cursor: pointer;
-  padding: 1rem;
-}
-
-/* .topbar h3 {
-  background-color: white;
-  padding: 0.5rem;
-} */
-
+  box-shadow: 2px 2px 5px grey; }
+  .topbar img {
+    float: right;
+    max-height: 2rem;
+    margin-top: 0.5rem;
+    margin-right: 0rem; }
+  .topbar select {
+    float: right;
+    background-color: transparent;
+    max-width: 1.5rem;
+    margin-top: 1rem;
+    margin-right: 0.5rem; }
+    .topbar select option:nth-child(2) {
+      cursor: pointer;
+      padding: 1rem; }
 
 .products-master {
   flex-basis: 83%;
   overflow-y: auto;
-
   flex-direction: column;
-  background-color: rgb(233, 233, 233);
-}
+  background-color: #e9e9e9; }
 
 .products {
   border-radius: 0.5%;
@@ -123,38 +109,29 @@ ul li:hover a {
   margin-right: 2%;
   flex-wrap: wrap;
   background-color: white;
-  margin-bottom: 3%;
-  }
-
+  margin-bottom: 3%; }
   .products h4 {
     width: 100%;
     background-color: white;
     margin-left: 1%;
-    margin-top: 1%;
-  }
+    margin-top: 1%; }
 
 .sizebuttons {
   clear: both;
-
   float: left;
-  margin-right:1px;
+  margin-right: 1px;
   margin-left: 10%;
-  background-color: white;
-}
-
-.sizebuttons button {
-  background-color: white;
-  cursor: pointer;
-  border: 1px solid grey;
-  border-radius: 3px;
-  width: 25px;
-  color: grey;
-}
-
-.sizebuttons button:hover {
-  background-color: grey;
-  color: white;
-}
+  background-color: white; }
+  .sizebuttons button {
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: 25px;
+    color: grey; }
+    .sizebuttons button:hover {
+      background-color: grey;
+      color: white; }
 
 .product-card {
   flex-basis: 20%;
@@ -179,50 +156,36 @@ ul li:hover a {
   margin-top: 0;
   padding-top: 10px;
   text-align: center; }
-
-
-
-.product-info p {
-  background-color: white;
-  clear: both;
-  font-size: 0.7rem;
-  font-style: italic;
-  margin-top: 5%;
-  margin-left: 10%;
-  float: left;
-}
+  .product-info p {
+    background-color: white;
+    clear: both;
+    font-size: 0.7rem;
+    font-style: italic;
+    margin-top: 5%;
+    margin-left: 10%;
+    float: left; }
+  .product-info h5 {
+    background-color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-weight: normal; }
+  .product-info h6 {
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: white;
+    color: #666;
+    font-size: 14px; }
 
 .prod-detail {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  justify-content: space-between;
-
-}
-
-
-
-.product-info h5 {
-  background-color: white;
-  flex-grow: 1;
-  flex-shrink: 1;
-  
-  font-weight: normal;
-  /* line-height: 1.7em; */
- }
-
-.product-info h6 {
-  justify-content: flex-end;
-  flex-grow: 1;
-  flex-shrink: 1;
-  background-color: white;
-  color: #666;
-  font-size: 14px; }
+  justify-content: space-between; }
 
 #myBtn {
   display: none;
-
   bottom: 20px;
   right: 30px;
   position: fixed;
@@ -232,66 +195,57 @@ ul li:hover a {
   width: 1.5rem;
   height: 1.5rem;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: transparent;
   cursor: pointer; }
 
 .sideicon {
   background-color: transparent;
   float: right;
-  margin-top:0.8rem;
-  margin-right: 0.8rem;
-}
+  margin-top: 0.8rem;
+  margin-right: 0.8rem; }
 
-  #sidebarBtn {
-    display: block;
-    position: fixed;
-    top: 0.7rem;
-    left: 20px;
-    z-index: 3;
-    border: none;
-    outline: none;
-    width: 1.5rem;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-    background-color: transparent;
-    height: 1.5rem;
-    color: transparent;
-    cursor: pointer; }
-  
-  #closeSidebar {
-    display: none;
-    position: fixed;
-    top: 0.8rem;
-    left: 90%;
-    z-index: 10;
-    border: none;
-    color: white;
-    outline: none;
+#sidebarBtn {
+  display: none;
+  position: fixed;
+  top: 0.7rem;
+  left: 20px;
+  z-index: 3;
+  border: none;
+  outline: none;
+  width: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  height: 1.5rem;
+  cursor: pointer; }
 
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-    background-color: transparent;
+#closeSidebar {
+  display: none;
+  position: fixed;
+  top: 0.8rem;
+  left: 90%;
+  z-index: 10;
+  border: none;
+  color: white;
+  outline: none;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  cursor: pointer; }
 
-    cursor: pointer; }
-
-    .closeimg {
-      border-radius: 50%;
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-
+.closeimg {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem; }
 
 @media all and (max-width: 480px) {
   .outside {
-    flex-direction: column; 
-    height: 120vh;}
+    flex-direction: column;
+    height: 120vh; }
 
-    .products-master {
-      height: 100vh;
-    }
+  .products-master {
+    height: 100vh; }
 
-    .product-info h6 {
-      font-size: 0.7rem;
-    }
+  .product-info h6 {
+    font-size: 0.7rem; }
 
   .sidebar {
     min-height: 100vh;

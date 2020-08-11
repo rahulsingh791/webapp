@@ -22,6 +22,7 @@
   
 } */
 /*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
 body {
   font-family: 'Nunito Sans', sans-serif;
   overflow-y: hidden; }
@@ -382,11 +383,11 @@ h3 {
   width: 1.5rem;
   height: 1.5rem;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: transparent;
   cursor: pointer; }
 
 #sidebarBtn {
-  display: block;
+  display: none;
   position: fixed;
   top: 0.7rem;
   left: 20px;
@@ -422,38 +423,42 @@ h3 {
     flex-direction: column;
     height: 120vh; }
 
-    .orders, .newUsers, .dashdetail, .profit {
-      width: 100%;
-      flex-basis: 100%;
-    }
+  .orders {
+    width: 100%;
+    flex-basis: 100%;
+    width: 120%; }
 
-    tr th:nth-child(2),tr td:nth-child(2){
+  .newUsers {
+    width: 100%;
+    flex-basis: 100%; }
 
-      display:none;
-    }
+  .dashdetail {
+    width: 100%;
+    flex-basis: 100%; }
 
-    tr th:nth-child(4),tr td:nth-child(4){
+  .profit {
+    width: 100%;
+    flex-basis: 100%; }
 
-      display:none;
-    }
+  tr th:nth-child(2) {
+    display: none; }
+  tr th:nth-child(4) {
+    display: none; }
+  tr td:nth-child(2) {
+    display: none; }
+  tr td:nth-child(4) {
+    display: none; }
 
-    .supDetail {
-      margin-top: -10%;
-    }
+  .supDetail {
+    margin-top: -10%; }
 
-    .orders {
-      width : 120%;
-    }
+  .cardContainer .card {
+    width: 100%;
+    flex-basis: 100%; }
 
-    .cardContainer .card {
-      width: 100%;
-      flex-basis: 100%;
-    }
-
-    .teamCard {
-      width: 100%;
-      flex-basis: 100%;
-    }
+  .teamCard {
+    width: 100%;
+    flex-basis: 100%; }
 
   .products {
     height: 100vh; }

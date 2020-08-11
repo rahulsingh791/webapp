@@ -22,6 +22,7 @@
   
 } */
 /*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dashboard.css.map */
 body {
 	font-family: 'Nunito Sans', sans-serif;
 	overflow-y: hidden;
@@ -152,6 +153,7 @@ ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-top: 0;
 	margin-left: 5%;
 	margin-right: 5%;
 	justify-content: space-between;
@@ -166,6 +168,12 @@ ul {
 	justify-content: space-between;
 }
 .dashdetail {
+	min-width: 300px;
+	background-color: white;
+	flex-basis: 45%;
+	border-radius: 15px;
+	max-height: 130px;
+	padding: 1%;
 	>#progressbar {
 		margin-top: 1rem;
 		background-color: #F2F4F8;
@@ -178,17 +186,17 @@ ul {
 			border-radius: 5px;
 		}
 	}
+	.value {
+		color: #ACB7BF;
+	}
+}
+.orders {
 	min-width: 300px;
 	background-color: white;
 	flex-basis: 45%;
 	border-radius: 15px;
 	max-height: 130px;
 	padding: 1%;
-	.value {
-		color: #ACB7BF;
-	}
-}
-.orders {
 	>#progressbar {
 		margin-top: 1rem;
 		background-color: #F2F4F8;
@@ -201,17 +209,17 @@ ul {
 			border-radius: 5px;
 		}
 	}
+	.value {
+		color: #007BFF;
+	}
+}
+.profit {
 	min-width: 300px;
 	background-color: white;
 	flex-basis: 45%;
 	border-radius: 15px;
 	max-height: 130px;
 	padding: 1%;
-	.value {
-		color: #007BFF;
-	}
-}
-.profit {
 	>#progressbar {
 		margin-top: 1rem;
 		background-color: #F2F4F8;
@@ -224,17 +232,17 @@ ul {
 			border-radius: 5px;
 		}
 	}
+	.value {
+		color: #47BE8A;
+	}
+}
+.newUsers {
 	min-width: 300px;
 	background-color: white;
 	flex-basis: 45%;
 	border-radius: 15px;
 	max-height: 130px;
 	padding: 1%;
-	.value {
-		color: #47BE8A;
-	}
-}
-.newUsers {
 	>#progressbar {
 		margin-top: 1rem;
 		background-color: #F2F4F8;
@@ -247,12 +255,6 @@ ul {
 			border-radius: 5px;
 		}
 	}
-	min-width: 300px;
-	background-color: white;
-	flex-basis: 45%;
-	border-radius: 15px;
-	max-height: 130px;
-	padding: 1%;
 	.value {
 		color: #FB424A;
 	}
@@ -289,7 +291,7 @@ table {
 		padding-left: 1%;
 		font-weight: bold;
 		background-color: #F2F4F8;
-		color: rgb(0, 0, 0);
+		color: black;
 	}
 	td {
 		border-top: 1px solid #E4E9F0;
@@ -434,11 +436,11 @@ h3 {
 	width: 1.5rem;
 	height: 1.5rem;
 	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-	background-color: white;
+	background-color: transparent;
 	cursor: pointer;
 }
 #sidebarBtn {
-	display: block;
+	display: none;
 	position: fixed;
 	top: 0.7rem;
 	left: 20px;
@@ -473,6 +475,54 @@ h3 {
 	.outside {
 		flex-direction: column;
 		height: 120vh;
+	}
+	.orders {
+		width: 100%;
+		flex-basis: 100%;
+		width: 120%;
+	}
+	.newUsers {
+		width: 100%;
+		flex-basis: 100%;
+	}
+	.dashdetail {
+		width: 100%;
+		flex-basis: 100%;
+	}
+	.profit {
+		width: 100%;
+		flex-basis: 100%;
+	}
+	tr {
+		th {
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(4) {
+				display: none;
+			}
+		}
+		td {
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(4) {
+				display: none;
+			}
+		}
+	}
+	.supDetail {
+		margin-top: -10%;
+	}
+	.cardContainer {
+		.card {
+			width: 100%;
+			flex-basis: 100%;
+		}
+	}
+	.teamCard {
+		width: 100%;
+		flex-basis: 100%;
 	}
 	.products {
 		height: 100vh;
