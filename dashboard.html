@@ -11,29 +11,213 @@
     <body  onload="loadCurr()">
 
         <button onclick="showSidebar()" id="sidebarBtn"><img src="assets/icons/bars-solid.svg"></button>
-        <button onclick="hideSidebar()" id="closeSidebar"><img src="assets/icons/times-solid.svg"></button>
-
+        <button onclick="topFunction()" id="myBtn"><img src="assets/icons/arrow-up-solid.svg"></button>
+        <button onclick="hideSidebar()" id="closeSidebar"><img class="closeimg" src="assets/icons/closex.png"></button>
+        
         <div class="outside">
             <div class="sidebar">
                 <header>
-                    <img src="assets/user-image/avatar.png" id="head-img">
-                    <h5 id="userName">User</h5>
-                    <button onclick="logOut()">Logout</button>
+                    <img src="assets/logo/rp-logo.png" id="head-img">
+                    <!--<h5 id="userName">User</h5>
+                    <button onclick="logOut()">Logout</button>-->
                 </header>
                 <ul class="">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="mycatalog.html">My Catalog</a></li>
-                    <li><a href="fullcatalog.html">Full Catalog</a></li>
+                    <li><a href="dashboard.html">Dashboard <img class="sideiconImg" src="assets/icons/home-solid.svg"></a></li>
+                    <!-- <li><a href="mycatalog.html">My Catalog</a></li> -->
+                    <li><a href="fullcatalog.html">Product Catalog <img class="sideiconImg" src="assets/icons/shopping-cart-solid.svg"></a></li>
                 </ul>
             </div>
-            <div class="products">
-                
-                <div class="dashdetail">
-                    <h3 id=emailinfo></h3>
-                    <h4 id="totalitem"></h4>
-                    <h4 id="totalcost"></h4>
+            <div class="products" onscroll="scrollFunction(this)">
+                <div class="topbar">
+                    <select onchange="logOut()" class="dropDownSelect">
+                        <option style="display:none"></option>
+                        <option value="Logout">Logout</option>
+                        
+                    </select>
+                    <!-- <ul class="dropButton">
+                        <li><img src="assets/icons/downarrow.png">
+                            <ul class="dropdown">
+                            <li><button onclick="logOut()">Logout</button></li>
+                            </ul>
+                        </li>
+                      </ul> -->
+                    <img title="" id="avatarimg" src="assets/user-image/avatar.png">
+                     
+                    
                 </div>
+
+                <h4 class="progressInfo">PROGRESS INFORMATION</h4>  
                 
+                <div class="supDetail">
+                    <div class="dashdetail infoCard">
+                        <!--<h3 id=emailinfo></h3>
+                        <h4 id="totalitem"></h4>
+                        <h4 id="totalcost"></h4>-->
+                        <b>Feedbacks</b>
+                        <b class="value">134</b>
+                        <p>Customer review</p>
+                        <div id="progressbar">
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="profit  infoCard">
+                        <b>Total Profit</b>
+                        <b class="value">$18M</b>
+                        <p>Profit</p>
+                        <div id="progressbar">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="moreInfo">
+                    <div class="orders infoCard">
+                        <b>New Orders</b>
+                        <b class="value">280</b>
+                        <p>Progress</p>
+                        <div id="progressbar">
+                            <div></div>
+                          </div>
+                    </div>
+
+                    <div class="newUsers infoCard">
+                        <b>New Users</b>
+                        <b class="value">490</b>
+                        <p>change</p>
+                        <div id="progressbar">
+                            <div></div>
+                          </div>
+                    </div>
+
+                </div> 
+                
+                <div class="referrals">
+                    <h4>RECENTLY REFERRALS</h4>
+                    <p>Back with recent important referrals</p>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Age</th>
+                            <th>Office</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        <tr>
+                            <td>Damon</td>
+                            <td>5516 Adolfo Green</td>
+                            <td>18</td>
+                            <td>LittleHaven</td>
+                            <td>2014/06/13</td>
+                            <td>553.536</td>
+                        </tr>
+                        <tr>
+                            <td>Damon</td>
+                            <td>5516 Adolfo Green</td>
+                            <td>18</td>
+                            <td>LittleHaven</td>
+                            <td>2014/06/13</td>
+                            <td>553.536</td>
+                        </tr>
+                        <tr>
+                            <td>Damon</td>
+                            <td>5516 Adolfo Green</td>
+                            <td>18</td>
+                            <td>LittleHaven</td>
+                            <td>2014/06/13</td>
+                            <td>553.536</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+                <div class="cards">
+                    <h4>YOUR CARDS (3)</h4>
+
+                    <div class="cardContainer">
+                        <div class="card">
+                            <p class="sideTag">$560,240.35</p>
+                            <div><img src="assets/icons/bookmark.png" height="50px"></div>
+                            <b>David Beckham</b>
+                            <p>4852-xxxx-5894-5246</p>
+                            <p class="cardType">MASTERCARD</p>
+                            <div class="line"></div>
+                            <i>Expires at 03/22</i>
+                        </div>
+
+                        <div class="card">
+                            <p class="sideTag">$560,240.35</p>
+                            <div><img src="assets/icons/bookmark.png" height="50px"></div>
+                            <b>David Beckham</b>
+                            <p>4852-xxxx-5894-5246</p>
+                            <p class="cardType">MASTERCARD</p>
+                            <div class="line"></div>
+                            <i>Expires at 03/22</i>
+                        </div>
+
+                        <div class="card">
+                            <p class="sideTag">$560,240.35</p>
+                            <div><img src="assets/icons/bookmark.png" height="50px"></div>
+                            <b>David Beckham</b>
+                            <p>4852-xxxx-5894-5246</p>
+                            <p class="cardType">MASTERCARD</p>
+                            <div class="line"></div>
+                            <i>Locked Temporary</i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="teams">
+                    <h4>YOUR TEAMS (4)</h4>
+
+                    <div class="teamContainer">
+                        <div class="teamCard">
+                            <h3>Team 1</h3>
+                            <div class="overlap">
+                                <b>JKR</b>
+                                <b>PKU</b>
+                            </div>
+                            <div class="line"></div>
+                            <i>Current Month Charged:</i>
+                            <i>$10,200.00</i>
+                        </div>
+
+                        <div class="teamCard">
+                            <h3>Team 1</h3>
+                            <div class="overlap">
+                                <b>JKR</b>
+                                <b>PKU</b>
+                            </div>
+                            <div class="line"></div>
+                            <i>Current Month Charged:</i>
+                            <i>$10,200.00</i>
+                        </div>
+
+                        <div class="teamCard">
+                            <h3>Team 1</h3>
+                            <div class="overlap">
+                                <b>JKR</b>
+                                <b>PKU</b>
+                            </div>
+                            <div class="line"></div>
+                            <i>Current Month Charged:</i>
+                            <i>$10,200.00</i>
+                        </div>
+
+                        <div class="teamCard">
+                            <h3>Team 1</h3>
+                            <div class="overlap">
+                                <b>JKR</b>
+                                <b>PKU</b>
+                            </div>
+                            <div class="line"></div>
+                            <i>Current Month Charged:</i>
+                            <i>$10,200.00</i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

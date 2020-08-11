@@ -21,8 +21,12 @@ function checkLogin() {
         if(name == user1name) {
             if(pass == user1pass) {
                 localStorage.setItem("currUser", user1name);
-                rem = document.getElementById("remember").checked;
-                localStorage.setItem("alwaysLoggedIn", rem);
+                
+                if(document.getElementById("remember").checked==true){
+                    localStorage.setItem("alwaysLoggedIn", true);
+                }else if(document.getElementById("remember").checked==false){
+                    localStorage.setItem("alwaysLoggedIn", false);
+                }
                 
                 window.location.href="fullcatalog.html";
             }else{
@@ -32,8 +36,11 @@ function checkLogin() {
         }else if(name == user2name){
             if(pass == user2pass) {
                 localStorage.setItem("currUser", user2name);
-                rem = document.getElementById("remember").checked;
-                localStorage.setItem("alwaysLoggedIn", rem);
+                if(document.getElementById("remember").checked==true){
+                    localStorage.setItem("alwaysLoggedIn", true);
+                }else if(document.getElementById("remember").checked==false){
+                    localStorage.setItem("alwaysLoggedIn", false);
+                }
                 
                 window.location.href="fullcatalog.html";
             }else{
@@ -74,7 +81,7 @@ function setData() {
 
 function checkRemember() {
     setData();
-    if(localStorage.getItem("alwaysLoggedIn")){
+    if(localStorage.getItem("alwaysLoggedIn")==="true"){
         window.location.href="fullcatalog.html";
     }
 }

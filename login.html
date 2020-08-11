@@ -4,17 +4,26 @@
     <link rel="stylesheet" href="Style/login.css">
     <script src="Script/login.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login RedPanda</title>
   </head>
   <body onload="checkRemember()">
-      <div class="container">
-        <img src="assets/circle-logo-best.png" id="logo-img">
-          <div><input type="text" onchange="checkMailFormat()" class="in-form" name="" value="" id="input-name"></div>
-          <div><input type="password" class="in-form" name="" value="" id="input-pass"></div>
-          <div id=""><input type="checkbox" id="remember" name="remember" value="">
-          <label class="in-text" for="remember">Remember me</label></div>
-          <div><button type="button" class="" name="button" id="login-button" onclick="checkLogin()">
-          LOGIN</button></div>
-          <p id="incorrect"><a href="#"></a></p>
+    <img class="logo" src="assets/logo/rp-logo.png" height="50px">
+
+      <div class="content-center">
+        <h1 class="whitetext">WELCOME TO REDPANDA</h1>
+        <P class="whitetext labels info">The Red Pandas is a team of pragmatic engineers who care deeply about the quality of their products and the success of their partners. Over the years, we have mastered best practices in building software products from concept to scale and we continue to learn emerging technologies.</P>
+        <div class="container">
+            <div><p id="main-head" class="leftalign">PLEASE LOG IN</p></div>
+            <div><p class="leftalign labels">Username</p><input type="email" placeholder="Email" class="in-form" name="" value="" id="input-name"></div>
+            <div><p class="leftalign labels">Password</p><input type="password" placeholder="Password" class="in-form" name="" value="" id="input-pass"></div>
+            <div class="leftalign" id=""><input type="checkbox" id="remember" name="remember" value="">
+            <label class="in-text labels" for="remember">Remember me</label></div>
+            <div><button type="button" class="" name="button" id="login-button" onclick="checkLogin()">
+            LOGIN</button></div>
+            <p id="incorrect"><a href="#"></a></p>
+        </div>
+
+        <p class="whitetext labels">© 2020 RedPanda. All rights reserved.
       </div>
   </body>
 </html>

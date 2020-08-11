@@ -13,182 +13,291 @@
 
         <button onclick="showSidebar()" id="sidebarBtn"><img src="assets/icons/bars-solid.svg"></button>
         <button onclick="topFunction()" id="myBtn"><img src="assets/icons/arrow-up-solid.svg"></button>
-        <button onclick="hideSidebar()" id="closeSidebar"><img src="assets/icons/times-solid.svg"></button>
+        <button onclick="hideSidebar()" id="closeSidebar"><img class="closeimg" src="assets/icons/closex.png"></button>
+        
 
         <div class="outside">
             <div class="sidebar">
                 <header>
-                    <img src="assets/user-image/avatar.png" id="head-img">
-                    <h5 id="userName">User</h5>
-                    <button onclick="logOut()">Logout</button>
+                    <img src="assets/logo/rp-logo.png" id="head-img">
+                    <!-- <h5 id="userName">User</h5>
+                    <button onclick="logOut()">Logout</button>-->
                 </header>
                 <ul class="">
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="mycatalog.html">My Catalog</a></li>
-                    <li><a href="fullcatalog.html">Full Catalog</a></li>
+                    <li><a href="dashboard.html">Dashboard <i class="fa fa-home sideicon" aria-hidden="true"></i></a></li>
+                    <!-- <li><a href="mycatalog.html">My Catalog</a></li> -->
+                    <li><a href="fullcatalog.html">Product Catalog <i class="fa fa-shopping-cart sideicon" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-            <div class="products" onscroll="scrollFunction(this)">
-                <div class="product-card" id="1" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/001.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Round Chair</h5>
-                        <h6>₹4600</h6>
-                    </div>
+            <div class="products-master" onscroll="scrollFunction(this)">
+                <div class="topbar">
+                    <select onchange="logOut()" class="dropDownSelect">
+                        <option style="display:none"></option>
+                        <option value="Logout">Logout</option>
+                        
+                    </select>
+                    <img title="" id="avatarimg" src="assets/user-image/avatar.png">
+                    
                 </div>
+                <div class="products">
+                    <h4>PRODUCT CATALOG</h4>
+                    <div class="product-card" id="1" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/001.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Round Chair</h5>
+                            <h6>₹4600</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
 
-                <div class="product-card" id="2" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/002.jpg">
+                    <div class="product-card" id="2" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/002.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Dust pan and Brush</h5>
+                            <h6>₹520</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h5>Dust pan and Brush</h5>
-                        <h6>₹520</h6>
+
+                    <div class="product-card" id="3" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/003.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Wooden Chair</h5>
+                            <h6>₹2300</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
                     </div>
+
+                    <div class="product-card" id="4" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/004.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Desk Chair</h5>
+                            <h6>₹1200</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="1" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/001.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Round Chair</h5>
+                            <h6>₹4600</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="2" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/002.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Dust pan and Brush</h5>
+                            <h6>₹520</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="3" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/003.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Wooden Chair</h5>
+                            <h6>₹2300</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="4" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/004.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Desk Chair</h5>
+                            <h6>₹1200</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="1" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/001.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Round Chair</h5>
+                            <h6>₹4600</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="2" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/002.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Dust pan and Brush</h5>
+                            <h6>₹520</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="3" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/003.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Wooden Chair</h5>
+                            <h6>₹2300</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="4" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/004.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Desk Chair</h5>
+                            <h6>₹1200</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="1" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/001.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Round Chair</h5>
+                            <h6>₹4600</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="2" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/002.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Dust pan and Brush</h5>
+                            <h6>₹520</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="3" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/003.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Wooden Chair</h5>
+                            <h6>₹2300</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="4" onclick="prodClick(this)">
+                        <div class="product-image">
+                            <img src="assets/product-image/004.jpg">
+                        </div>
+                        <div class="product-info">
+                            <h5>Desk Chair</h5>
+                            <h6>₹1200</h6>
+                            <div class="sizebuttons">
+                                <button>S</button>
+                                <button>M</button>
+                                <button>XL</button>
+                            </div>
+                            <p>Including Lenses</p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="product-card" id="3" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/003.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Wooden Chair</h5>
-                        <h6>₹2300</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="4" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/004.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Desk Chair</h5>
-                        <h6>₹1200</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="1" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/001.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Round Chair</h5>
-                        <h6>₹4600</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="2" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/002.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Dust pan and Brush</h5>
-                        <h6>₹520</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="3" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/003.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Wooden Chair</h5>
-                        <h6>₹2300</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="4" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/004.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Desk Chair</h5>
-                        <h6>₹1200</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="1" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/001.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Round Chair</h5>
-                        <h6>₹4600</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="2" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/002.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Dust pan and Brush</h5>
-                        <h6>₹520</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="3" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/003.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Wooden Chair</h5>
-                        <h6>₹2300</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="4" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/004.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Desk Chair</h5>
-                        <h6>₹1200</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="1" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/001.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Round Chair</h5>
-                        <h6>₹4600</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="2" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/002.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Dust pan and Brush</h5>
-                        <h6>₹520</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="3" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/003.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Wooden Chair</h5>
-                        <h6>₹2300</h6>
-                    </div>
-                </div>
-
-                <div class="product-card" id="4" onclick="prodClick(this)">
-                    <div class="product-image">
-                        <img src="assets/product-image/004.jpg">
-                    </div>
-                    <div class="product-info">
-                        <h5>Desk Chair</h5>
-                        <h6>₹1200</h6>
-                    </div>
-                </div>
-
             </div>
         </div>
     </body>

@@ -1,7 +1,7 @@
 function loadCurr() {
     setUser();
     let user = localStorage.getItem("currUser");
-    document.getElementById("emailinfo").innerHTML = "Email Id : "+user;
+    /*document.getElementById("emailinfo").innerHTML = "Email Id : "+user;
 
     let count = 0;
     if(localStorage.getItem("userCartCount"+user)==null){
@@ -22,7 +22,7 @@ function loadCurr() {
         }
     }
 
-    document.getElementById("totalcost").innerHTML = "Total cost : "+"₹"+totalcost;
+    document.getElementById("totalcost").innerHTML = "Total cost : "+"₹"+totalcost;*/
 
 }
 
@@ -36,7 +36,8 @@ function logOut() {
   
   function setUser() {
     let user = localStorage.getItem("currUser");
-    document.getElementById("userName").innerHTML = user;
+    //document.getElementById("userName").innerHTML = user;
+    document.getElementById("avatarimg").setAttribute("title", user);
   }
 
 
@@ -57,4 +58,19 @@ function logOut() {
     let sideBar = document.getElementsByClassName("sidebar")[0];
   
     sideBar.style.display = "none";
+  }
+
+  function scrollFunction(obj) {
+    let mybutton = document.getElementById("myBtn");
+
+  if (document.getElementsByClassName("products")[0].scrollTop > 250) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+    document.getElementsByClassName("products")[0].scrollTop = 0;
   }

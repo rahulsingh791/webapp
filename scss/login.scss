@@ -1,31 +1,42 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap";
+/*# sourceMappingURL=login.css.map */
 body {
-	background-image: linear-gradient(to bottom, rgba(41, 244, 153, 0.2), rgba(10, 179, 228, 0.2)), url(../assets/background.jpg);
+	background-image: url(../assets/login-bg.jpg);
 	background-size: cover;
 	font-family: 'Nunito Sans', sans-serif;
 	display: flex;
 	height: 97.5vh;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	user-select: none;
 }
-#logo-img {
-	margin: 2rem;
+.content-center {
+	max-width: 700px;
+	align-self: center;
+	justify-self: center;
+}
+.logo {
+	align-self: start;
+	justify-self: start;
+}
+.whitetext {
+	color: white;
+	text-align: center;
 }
 #login-button {
-	height: 4em;
-	border-radius: 2.5em;
-	width: 15em;
-	background-color: #FFC107;
+	height: 3em;
+	border-radius: 0.5em;
+	width: 5em;
+	background-color: #0090FE;
 	border-width: 0px;
-	padding-left: 4em;
-	margin-top: 2rem;
-	padding-right: 4em;
-	margin-bottom: 0em;
+	margin-left: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1em;
+	color: white;
 	outline: none;
 	cursor: pointer;
 	&:hover {
-		background-color: #FBC02D;
+		background-color: #0070c5;
 	}
 }
 a {
@@ -35,30 +46,45 @@ a {
 #incorrect {
 	color: red;
 }
+.leftalign {
+	margin-left: 1.5rem;
+}
 .in-form {
 	width: 70%;
 	height: 1.3rem;
-	margin: 1rem;
-	border: none;
-	border-bottom: 1px solid #3d4849;
-	font-size: 1.2rem;
+	margin-left: 1.5rem;
+	border: 1px solid #bdbdbd;
+	font-size: 0.8rem;
+	border-radius: 0.5rem;
 	outline: none;
 	background-color: rgba(255, 255, 255, 0);
 }
 #remember {
-	margin-top: 0.5rem;
-	background-color: rgba(0, 0, 0, .3);
-	color: rgba(0, 0, 0, .3);
+	margin-top: 1rem;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 #input-name {
 	margin-top: 0;
 }
+#main-head {
+	padding-top: 1rem;
+	font-weight: bold;
+}
+.labels {
+	font-size: 0.9rem;
+}
+.info {
+	margin-bottom: 2rem;
+}
 .container {
 	min-width: 300px;
-	text-align: center;
-	background-color: rgba(255, 255, 255, .15);
-	backdrop-filter: blur(25px);
+	max-width: 400px;
+	text-align: left;
+	background-color: white;
 	border-radius: 10px;
-	box-shadow: 1px 1px 1rem 0 rgba(0, 0, 0, .3);
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 1px 1px 1rem 0 rgba(0, 0, 0, 0.3);
 	margin-bottom: 4em;
 }

@@ -49,8 +49,9 @@ function tellCurr() {
   document.getElementById("product-name").innerHTML = name;
   document.getElementById("product-price").innerHTML = "₹"+price;
   document.getElementById("standard-info").innerHTML = desc;
-  document.getElementById("soldby").innerHTML = "Sold by "+seller+"";
+  document.getElementById("soldby").innerHTML = "About "+seller+"";
   document.getElementById("product-img").setAttribute("src", "assets/product-image/00"+objid+".jpg");
+  document.getElementById('standard-info').style.display = "block";
 }
 
 function goBack() {
@@ -83,7 +84,39 @@ function logOut() {
 
 function setUser() {
   let user = localStorage.getItem("currUser");
-  document.getElementById("userName").innerHTML = user;
+  /*document.getElementById("userName").innerHTML = user;*/
+  document.getElementById("avatarimg").setAttribute("title", user);
 }
 
+function openInfo(evt, tabselect) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabselect).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
+function changeUpImg(num) {
+  document.getElementById("product-img").setAttribute("src", "assets/product-image/00"+num+".jpg");
+}
+
+function scrollFunction(obj) {
+  let mybutton = document.getElementById("myBtn");
+
+if (document.getElementsByClassName("details-master")[0].scrollTop > 20) {
+  mybutton.style.display = "block";
+} else {
+  mybutton.style.display = "none";
+}
+}
+
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+  document.getElementsByClassName("details-master")[0].scrollTop = 0;
+}

@@ -15,7 +15,8 @@ function logOut() {
 
 function setUser() {
     let user = localStorage.getItem("currUser");
-    document.getElementById("userName").innerHTML = user;
+    /*document.getElementById("userName").innerHTML = user;*/
+    document.getElementById("avatarimg").setAttribute("title", user);
 }
 
 function showSidebar() {
@@ -41,7 +42,7 @@ function hideSidebar() {
 function scrollFunction(obj) {
     let mybutton = document.getElementById("myBtn");
 
-  if (document.getElementsByClassName("products")[0].scrollTop > 250) {
+  if (document.getElementsByClassName("products-master")[0].scrollTop > 250) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -50,5 +51,9 @@ function scrollFunction(obj) {
 
 function topFunction() {
     document.documentElement.scrollTop = 0;
-    document.getElementsByClassName("products")[0].scrollTop = 0;
+    document.getElementsByClassName("products-master")[0].scrollTop = 0;
   }
+
+function changeUpImg(num) {
+  
+}
