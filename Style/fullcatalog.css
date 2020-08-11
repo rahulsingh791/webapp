@@ -135,9 +135,10 @@ ul li:hover a {
 
 .sizebuttons {
   clear: both;
+
   float: left;
   margin-right:1px;
-  margin-left: 1px;
+  margin-left: 10%;
   background-color: white;
 }
 
@@ -179,23 +180,42 @@ ul li:hover a {
   padding-top: 10px;
   text-align: center; }
 
+
+
 .product-info p {
   background-color: white;
   clear: both;
   font-size: 0.7rem;
   font-style: italic;
   margin-top: 5%;
+  margin-left: 10%;
   float: left;
 }
 
+.prod-detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+
+
 .product-info h5 {
   background-color: white;
-  float: left;
-  font-weight: 500;
-  line-height: 1.7em; }
+  flex-grow: 1;
+  flex-shrink: 1;
+  
+  font-weight: normal;
+  /* line-height: 1.7em; */
+ }
 
 .product-info h6 {
-  float:right;
+  justify-content: flex-end;
+  flex-grow: 1;
+  flex-shrink: 1;
   background-color: white;
   color: #666;
   font-size: 14px; }
@@ -267,6 +287,10 @@ ul li:hover a {
 
     .products-master {
       height: 100vh;
+    }
+
+    .product-info h6 {
+      font-size: 0.7rem;
     }
 
   .sidebar {

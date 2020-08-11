@@ -127,6 +127,7 @@ ul li:hover a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 0;
   margin-left: 5%;
   margin-right: 5%;
   justify-content: space-between; }
@@ -420,6 +421,39 @@ h3 {
   .outside {
     flex-direction: column;
     height: 120vh; }
+
+    .orders, .newUsers, .dashdetail, .profit {
+      width: 100%;
+      flex-basis: 100%;
+    }
+
+    tr th:nth-child(2),tr td:nth-child(2){
+
+      display:none;
+    }
+
+    tr th:nth-child(4),tr td:nth-child(4){
+
+      display:none;
+    }
+
+    .supDetail {
+      margin-top: -10%;
+    }
+
+    .orders {
+      width : 120%;
+    }
+
+    .cardContainer .card {
+      width: 100%;
+      flex-basis: 100%;
+    }
+
+    .teamCard {
+      width: 100%;
+      flex-basis: 100%;
+    }
 
   .products {
     height: 100vh; }
